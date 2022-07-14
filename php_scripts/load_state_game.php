@@ -2,6 +2,15 @@
 require("./keys.php");
 
 session_start();
+setcookie(
+       session_name(),
+       session_id(),
+       [
+           'path' => '/',
+           'secure' => true,
+           'samesite' => 'None',
+       ]
+   );
 $gameData = [];
 
 
